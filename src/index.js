@@ -30,5 +30,28 @@ const sortItemsInEachCategory = () => {
   pizzaItems.sort((a, b) => a.menuOrder - b.menuOrder);
 };
 
+/**
+ * Render the sorted results into the appropriate container with required formats.
+ * @param {string} the id of the menu ul
+ * @param {items}  the menu items to be rendered
+ */
+const renderMenuItems = (menuId, items) => {
+  const menu = document.querySelector(menuId);
+  items.forEach((item) => {
+    const formatedPrice = document.createElement("span");
+    formatedPrice.innerText = "$" + item.price.toFixed(2);
+    const itemName = document.createElement("li");
+    itemName.innerText = item.name;
+    itemName.appendChild(formatedPrice);
+    if (item.spicy) {
+      itemName.classList.add("spicy");
+    }
+    menu.appendChild(itemName);
+  });
+};
+
 categorizeItems();
 sortItemsInEachCategory();
+renderMenuItems("#startersMenu", startersItems);
+renderMenuItems("#pastaMenu", pastaItems);
+renderMenuItems("#pizzaMenu", pizzaItems);
