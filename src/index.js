@@ -6,6 +6,9 @@ const startersItems = [];
 const pastaItems = [];
 const pizzaItems = [];
 
+// To store DOM elements that are spicy items
+const spicyElements = [];
+
 /**
  *  Loop over menuItems and categorize them into sections based on each items assigned type.
  */
@@ -48,9 +51,24 @@ const renderMenuItems = (menuId, items) => {
     itemName.appendChild(itemDescription);
     if (item.spicy) {
       itemName.classList.add("spicy");
+      spicyElements.push(itemName);
     }
     menu.appendChild(itemName);
   });
+};
+
+/**
+ * Change the visibility of spicy food.
+ */
+const changeVisibility = () => {
+  for (let element of spicyElements) {
+    element.classList.toggle("hide");
+  }
+};
+
+const setUpFilter = () => {
+  const checkbox = document.querySelector("#showSpicy");
+  checkbox.addEventListener("click", changeVisibility);
 };
 
 categorizeItems();
@@ -58,3 +76,4 @@ sortItemsInEachCategory();
 renderMenuItems("#startersMenu", startersItems);
 renderMenuItems("#pastaMenu", pastaItems);
 renderMenuItems("#pizzaMenu", pizzaItems);
+setUpFilter();
