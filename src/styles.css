@@ -80,6 +80,10 @@ form {
 }
 
 @media screen and (max-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+
   main {
     column-count: 1;
   }
