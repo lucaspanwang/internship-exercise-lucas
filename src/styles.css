@@ -1,5 +1,26 @@
 body {
   font-family: sans-serif;
+  background: url("../assets/background.jpg") repeat;
+  margin: 4rem 15%;
+  padding: 1rem 0;
+  border: 30px solid rgb(0, 133, 0);
+  box-shadow: 0 30px 50px rgba(2, 7, 17, 0.425);
+}
+
+header {
+  text-align: center;
+  color: rgb(0, 64, 0);
+  margin-bottom: 3rem;
+}
+
+main {
+  margin-top: 3rem 0;
+  column-count: 2;
+}
+
+section {
+  width: 80%;
+  padding: 0 10%;
 }
 
 .spicy:before {
@@ -12,4 +33,29 @@ body {
   padding-right: 3px;
   position: relative;
   top: 2px;
+}
+
+h1 {
+  font-family: "Emilys Candy", cursive;
+}
+
+h2 {
+  margin-top: 0;
+  font-family: "Sansita Swashed", cursive;
+  border-bottom: 5px dotted rgb(0, 133, 0);
+  margin-left: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+li {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0.2rem;
+  font-weight: normal;
+}
+
+span {
+  float: right;
 }

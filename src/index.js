@@ -40,9 +40,12 @@ const renderMenuItems = (menuId, items) => {
   items.forEach((item) => {
     const formatedPrice = document.createElement("span");
     formatedPrice.innerText = "$" + item.price.toFixed(2);
+    const itemDescription = document.createElement("p");
+    itemDescription.innerText = item.description;
     const itemName = document.createElement("li");
     itemName.innerText = item.name;
     itemName.appendChild(formatedPrice);
+    itemName.appendChild(itemDescription);
     if (item.spicy) {
       itemName.classList.add("spicy");
     }
