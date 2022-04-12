@@ -9,7 +9,7 @@ body {
 header {
   text-align: center;
   color: rgb(0, 64, 0);
-  margin: 3rem;
+  margin: 2rem;
 }
 
 main {
@@ -42,12 +42,12 @@ h2 {
   margin-top: 0;
   font-family: "Sansita Swashed", cursive;
   border-bottom: 5px dotted rgb(0, 133, 0);
-  margin-left: 1.5rem;
   padding-bottom: 0.5rem;
 }
 
 li {
   font-weight: bold;
+  margin-left: -1.5rem;
 }
 
 p {
@@ -60,6 +60,18 @@ span {
 }
 
 .disclaimers {
-  margin: 3rem 0;
+  margin: 2rem 0;
   padding: 0 10%;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    column-count: 1;
+  }
+
+  body {
+    border: 0;
+    margin: 0;
+    box-shadow: none;
+  }
 }
