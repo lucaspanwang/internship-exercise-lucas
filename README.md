@@ -106,7 +106,7 @@ Three recent work and projects I've participated or been participating:
 
 ## 4. Code Challenge
 
-- My solution:
+- My solution: (A "TODO.md" file is also added in this repository)
 
   CodeSandbox URL: https://codesandbox.io/s/suspicious-sara-kxywhc
 
